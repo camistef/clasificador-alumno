@@ -1,0 +1,58 @@
+{
+  "algoritmo": "regresion_logistica",
+  "nombre": "Regresión logística",
+  "hiperparametros": {
+    "C": 100
+  },
+  "umbral": 0.4291931052718554,
+  "metodo_umbral": "CV repetida 10x5; mayor precisión con recall >= 0.90 (meta 0.8 + margen 0.1)",
+  "nota_evaluacion": "Segunda evaluación sobre el conjunto de prueba; la primera (umbral 0.690 sin margen) dio recall 0.733. Ver reporte.",
+  "variables": [
+    "horas_estudio",
+    "asistencia",
+    "promedio_anterior",
+    "tareas_entregadas",
+    "participacion_clase"
+  ],
+  "metricas_cv_media": {
+    "recall": 0.9082051282051282,
+    "precision": 0.7690276406599935,
+    "f1": 0.8290732773398246,
+    "roc_auc": 0.945464237516869
+  },
+  "metricas_cv_desviacion": {
+    "recall": 0.09524196949009105,
+    "precision": 0.07573273708771415,
+    "f1": 0.06638964118711127,
+    "roc_auc": 0.030682823807588286
+  },
+  "metricas_prueba": {
+    "recall": 0.8,
+    "precision": 0.6666666666666666,
+    "f1": 0.7272727272727273,
+    "roc_auc": 0.9226666666666666
+  },
+  "matriz_confusion_prueba": [
+    [
+      19,
+      6
+    ],
+    [
+      3,
+      12
+    ]
+  ],
+  "cumple_metas_prueba": true,
+  "tamanos": {
+    "entrenamiento": 160,
+    "prueba": 40
+  },
+  "semilla": 42,
+  "fecha": "2026-11-11T07:29:51",
+  "versiones": {
+    "python": "3.14.7",
+    "scikit-learn": "1.9.1",
+    "pandas": "3.1.0",
+    "numpy": "2.5.4"
+  }
+}
